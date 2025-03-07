@@ -1,12 +1,6 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [react()], 
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true, 
-      },
-    },
-  },
-});
+    appType:'mpa',
+    base:process.env.DEPLOY_BASE_URL
+})

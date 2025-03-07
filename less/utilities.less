@@ -1,0 +1,54 @@
+@import "variables.less";
+
+button {
+    background-color: @button-bg;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @button-hover-bg;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    input, textarea {
+        font-size: 16px;
+    }
+}
+
+.skills-card a {
+    background: white;
+    color: #2a5298;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+
+    &:hover {
+        background: @primary-color;
+        color: #2a5298;
+    }
+}
