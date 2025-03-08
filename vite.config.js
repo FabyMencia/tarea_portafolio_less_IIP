@@ -36,6 +36,7 @@ export default defineConfig({
         },
       },
       build: {
+        assetsDir: 'assets',
         rollupOptions: {
           input: obtenerEntradas()
         },
