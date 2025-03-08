@@ -29,6 +29,14 @@ const obtenerEntradas = ()=>{
 
 export default defineConfig({
 
+    css: {
+        preprocessorOptions: {
+          less: {
+            javascriptEnabled: true,
+          },
+        },
+      },
+
     appType: 'mpa',
     base: process.env.DEPLOY_BASE_URL,
     build: {
@@ -46,14 +54,6 @@ export default defineConfig({
         }),
         htmlPurge({}),
         ViteMinifyPlugin()
-    ],
-
-    css: {
-        preprocessorOptions: {
-          less: {
-            javascriptEnabled: true,
-          },
-        },
-      },
+    ]
 });
 
