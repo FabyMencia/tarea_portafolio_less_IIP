@@ -12,9 +12,7 @@
     "glob": "^11.0.1",
     "less": "^4.2.2",
     "vite": "^6.2.1",
-    "vite-plugin-handlebars": "^1.5.0",
     "vite-plugin-minify": "^2.1.0",
-    "vite-plugin-purgecss": "^0.2.12",
     "vite-plugin-style-import": "^2.0.0"
   },
   "dependencies": {
