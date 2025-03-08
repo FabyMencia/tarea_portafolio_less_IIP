@@ -28,6 +28,7 @@ const obtenerEntradas = ()=>{
 
 
 export default defineConfig({
+
     appType: 'mpa',
     base: process.env.DEPLOY_BASE_URL,
     build: {
@@ -45,14 +46,14 @@ export default defineConfig({
         }),
         htmlPurge({}),
         ViteMinifyPlugin()
-    ]
+    ],
+
+    css: {
+        preprocessorOptions: {
+          less: {
+            javascriptEnabled: true,
+          },
+        },
+      },
 });
 
-/**
- 
-✓ 2 modules transformed.
-dist/index.html                 1.71 kB │ gzip: 0.63 kB
-dist/assets/index-DMCu4TLF.css  5.83 kB │ gzip: 1.22 kB
-✓ built in 251ms
-
- */
