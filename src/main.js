@@ -1,10 +1,3 @@
-import '../less/global.less';
-import '../less/header.less';
-import '../less/hero.less';
-import '../less/main.less';
-import '../less/utilities.less';
-import '../less/variables.less';
-
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
