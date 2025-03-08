@@ -1,8 +1,6 @@
 import path, {resolve} from 'node:path'
 import { defineConfig } from 'vite'
 import * as glob from 'glob'
-import htmlPurge from 'vite-plugin-purgecss'
-import handlebars from 'vite-plugin-handlebars'
 import {ViteMinifyPlugin} from 'vite-plugin-minify'
 
 const obtenerEntradas = ()=>{
@@ -42,16 +40,6 @@ export default defineConfig({
         },
         minify: true
       },
-      base: "/tarea_portafolio_less_IIP/",  // Asegúrate de que sea correcto
-      plugins: [
-        handlebars({
-          partialDirectory: resolve(__dirname, 'partials'),
-          context : (pagePath) => {
-            return {}
-          }
-        }),
-        htmlPurge({}),
-        ViteMinifyPlugin(),
-      ],
+
 });
 
