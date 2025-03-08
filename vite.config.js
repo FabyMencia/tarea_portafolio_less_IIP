@@ -28,32 +28,29 @@ const obtenerEntradas = ()=>{
 
 
 export default defineConfig({
-
     css: {
         preprocessorOptions: {
           less: {
-            javascriptEnabled: true,
+            javascriptEnabled: true, // Esto es necesario para habilitar ciertos tipos de LESS
           },
         },
       },
-
-    appType: 'mpa',
-    base: process.env.DEPLOY_BASE_URL,
-    build: {
+      build: {
         rollupOptions: {
-            input: obtenerEntradas()
+          input: obtenerEntradas()
         },
         minify: true
-    },
-    plugins: [
+      },
+      base: "/tarea_portafolio_less_IIP/",  // Asegúrate de que sea correcto
+      plugins: [
         handlebars({
-            partialDirectory: resolve(__dirname, 'partials'),
-            context : (pagePath)=> {
-                return {}
-            }
+          partialDirectory: resolve(__dirname, 'partials'),
+          context : (pagePath) => {
+            return {}
+          }
         }),
         htmlPurge({}),
-        ViteMinifyPlugin()
-    ]
+        ViteMinifyPlugin(),
+      ],
 });
 
