@@ -1,4 +1,10 @@
 import './styles/main.less'
+import './styles/variables.less'
+import './styles/global.less'
+import './styles/utilities.less'
+import './styles/header.less'
+import './styles/hero.less'
+
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
