@@ -4,6 +4,7 @@ import * as glob from 'glob';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig({
+    base:'https://FabyMencia.github.io/tarea_portafolio_less_IIP',
   css: {
     preprocessorOptions: {
       less: {
